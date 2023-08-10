@@ -1,0 +1,78 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1rem;  
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+img{
+    display: block;
+}
+
+details summary { 
+    cursor: pointer;
+}
+  
+details summary > * {
+    display: inline;
+}
+
+summary {
+    display: block;
+}
+
+/* the rest is just for esthetics */
+
+summary::after {
+    margin-left: 1ch;
+    display: inline-block;
+    content: '▶️';
+    transition: 0.2s;
+}
+  
+details[open] summary::after {
+    transform: rotate(90deg);
+}
+
+.container{
+    max-width: 375px;
+}
+
+.img-container{
+    margin: 0 auto;
+    padding: 0 4rem;
+    position: relative;
+    top: 35px;
+}
+
+.header-image{
+    position: relative;
+}
+
+.bottom-image{
+    position: absolute;
+    bottom: -35px;
+}
+
+.help-dropdown-container{
+    margin: 0 1rem;
+    border: 1px solid black;
+    padding: 0 1.5rem;
+    padding-top: 8rem;
+    position: relative;
+    top: -35px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.heading{
+    margin: 0;
+}
+
+.details-container{
+    padding-top: 2rem;
+}

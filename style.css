@@ -5,48 +5,63 @@
 }
 
 html {
-    font-size: 1rem;  
+    font-size: 13px;  
     font-family: 'Kumbh Sans', sans-serif;
+}
+
+body{
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    margin: 0;
+    max-width: 375px;
 }
 
 img{
     display: block;
 }
 
+details{
+    color: hsl(240, 6%, 50%);
+}
+
 details summary { 
     cursor: pointer;
+    display: block;
 }
   
 details summary > * {
     display: inline;
 }
 
-summary {
-    display: block;
-}
-
 /* the rest is just for esthetics */
-
 summary::after {
-    margin-left: 1ch;
-    display: inline-block;
-    content: '▶️';
+    display: block;
+    content: url('./images/icon-arrow-down.svg');
     transition: 0.2s;
 }
   
 details[open] summary::after {
-    transform: rotate(90deg);
+    transform: rotate(180deg);
+}
+
+details[open] summary{
+    font-weight: bolder;
+    color: hsl(237, 12%, 33%);
+    transition: 0.5s;
 }
 
 .container{
-    max-width: 375px;
+    padding-bottom: 4rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .img-container{
     margin: 0 auto;
-    padding: 0 4rem;
+    padding: 0 5.5rem;
     position: relative;
-    top: 35px;
+    top: 40px;
+    z-index: 10;
 }
 
 .header-image{
@@ -59,20 +74,56 @@ details[open] summary::after {
 }
 
 .help-dropdown-container{
-    margin: 0 1rem;
-    border: 1px solid black;
-    padding: 0 1.5rem;
-    padding-top: 8rem;
+    margin: 0 1.5rem;
+    border: 1px solid transparent;
+    padding: 8rem 2rem 2rem;
     position: relative;
-    top: -35px;
+    top: -30px;
     text-align: center;
     border-radius: 20px;
+    background-color: white;
 }
 
 .heading{
-    margin: 0;
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    color: hsl(237, 12%, 33%);
 }
 
 .details-container{
-    padding-top: 2rem;
+    padding-top: 0.5rem;
+}
+
+.details-tag{
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.summary-header{
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.summary-description{
+    text-align: initial;
+}
+
+details[open] summary ~ * {
+    animation: sweep .5s ease-in-out;
+  }
+  
+@keyframes sweep {
+    0%    {opacity: 0; margin-left: -10px}
+    100%  {opacity: 1; margin-left: 0px}
+}
+
+@media only screen and (min-width: 376px) {
+    body{
+        max-width: 100%;
+    }
+    .container{
+        max-width: 430px;
+    }
 }

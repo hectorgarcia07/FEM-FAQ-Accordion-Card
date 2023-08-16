@@ -65,9 +65,17 @@ details[open] summary{
 }
 
 .header-image{
+    content: url('./images/illustration-woman-online-mobile.svg');
+    position: relative;
+    left: -17px;
+    top: -6px;
 }
-
+.middle-image{
+    content: url('./images/illustration-box-desktop.svg');
+    visibility: hidden;
+}
 .bottom-image{
+    content: url('./images/bg-pattern-mobile.svg');
     position: relative;
     top: -70px;
 }
@@ -126,6 +134,17 @@ details[open] summary ~ * {
         flex-direction: column;
         justify-content: center;
     }
+    .header-image{
+        content: url('./images/illustration-woman-online-desktop.svg');
+        left: -4px;
+        top: -6px;
+    }
+    .middle-image{
+        visibility: visible;
+        position: absolute;
+        bottom: 47px;
+        left: -13px;
+    }
     .container{
         max-width: 920px;
         width: 100%;
@@ -134,22 +153,42 @@ details[open] summary ~ * {
         border: 1px solid transparent;
         background-color: white;
         border-radius: 20px;
-        padding: 1rem;
+        padding: 3.5rem 0rem;
         position: relative;
         left: 20px;
     }
     .img-container{
         margin: 0;
-        position: relative;
         display: flex;
         flex-direction: column;
-        width: 100%;
-        max-width: 36rem;
-        left: -95px;
+        justify-content: center;
+        bottom: -55px;
+        position: relative;
+        left: -80px;
         bottom: 0px;
+    }
+    .bottom-image{
+        content: url('./images/bg-pattern-desktop.svg');
+        position: absolute;
+        top: -342px;
+        right: 4px;
     }
     .help-dropdown-container{
         margin: 0;
+        margin-left: auto;
         position: static;
+        padding: 1rem;
+        text-align: left;
+        width: 50%;
+    }
+    .details-container{
+        max-width: 339px;
+    }
+    .heading{
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+    .summary-header{
+        font-size: 1.1rem;
     }
 }

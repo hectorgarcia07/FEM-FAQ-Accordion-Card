@@ -70,6 +70,9 @@ details[open] summary{
     left: -17px;
     top: -6px;
 }
+.middle-img-container{
+    display: none;
+}
 .middle-image{
     content: url('./images/illustration-box-desktop.svg');
     visibility: hidden;
@@ -78,6 +81,7 @@ details[open] summary{
     content: url('./images/bg-pattern-mobile.svg');
     position: relative;
     top: -70px;
+    display: none;
 }
 
 .help-dropdown-container{
@@ -126,6 +130,7 @@ details[open] summary ~ * {
     100%  {opacity: 1; margin-left: 0px}
 }
 
+/* 
 @media only screen and (min-width: 376px) {
     body{
         max-width: 100%;
@@ -155,6 +160,7 @@ details[open] summary ~ * {
         z-index: 3;
     }
     .middle-img-container{
+        display: block;
         position: fixed;
         z-index: 10;
     }
@@ -171,6 +177,7 @@ details[open] summary ~ * {
         right: -36rem;
         top: -42rem;
         z-index: 0;
+        display: block;
     }
     .container{
         max-width: 920px;
@@ -204,3 +211,4 @@ details[open] summary ~ * {
         font-size: 1.1rem;
     }
 }
+ */

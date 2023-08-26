@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Github Pages](https://hectorgarcia07.github.io/FEM-FAQ-Accordion-Card/)
+- [Github Repo](https://github.com/hectorgarcia07/FEM-FAQ-Accordion-Card)
 
 ## My process
 
